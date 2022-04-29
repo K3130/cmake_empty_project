@@ -43,4 +43,13 @@ target_link_libraries(
 include(GoogleTest)
 gtest_discover_tests(hello_test)
 
+#cpack
+#install: sudo dpkg -i DEB_PACKAGE
+#remove: sudo dpkg -r PACKAGE_NAME
+install(TARGETS main)
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "KK")
+INCLUDE(CPack)
+
+
 
